@@ -3,6 +3,7 @@ import tkinter.font as tkFont
 
 from util import string_is_float, string_is_int
 
+//defines text boxes for what you type in, if they're typing in a number let them keep typing but don't let them type letters
 
 class IntEntry(tk.Entry):
 	def __init__(self, master=None, **kwargs):
@@ -18,6 +19,7 @@ class IntEntry(tk.Entry):
 		else:
 			self.set(self.old_value)
 	
+	//if you dont type, it's set as 0
 	def get_int(self):
 		if string_is_int(self.get()):
 			return int(self.get())
