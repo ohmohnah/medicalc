@@ -14,6 +14,7 @@ def calvert_formula(age, weight, creatinine, gender, AUC):
 def rituxan_dose_formula(mg_per_hour, bag_volume, dose_volume):
     return mg_per_hour * (bag_volume / dose_volume)
 
+//makes sure the number is valid
 
 def string_is_float(string):
     try:
@@ -21,9 +22,9 @@ def string_is_float(string):
         return True
     except ValueError:
         return False
-
+//same thing but integer
 def string_is_int(string):
     return string.isdigit()
-
+//shows warning box
 def warning_box(message):
     return tkinter.messagebox.showwarning(title="WARNING", message=message)
